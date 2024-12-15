@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Page</title>
+    <style>
+        /* Base Styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            padding: 20px;
+            background-color: #f9f9f9;
+            color: #333;
+        }
+        header {
+            text-align: center;
+            margin-bottom: 20px;
+            padding: 10px;
+            background-color: #0073e6;
+            color: white;
+            border-radius: 5px;
+        }
+        header h1 {
+            font-size: 2rem;
+        }
+        main {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 15px;
+        }
+        .section {
+            border: 2px solid #333;
+            background-color: #fff;
+            padding: 20px;
+            position: relative;
+            flex: 1;
+            min-width: calc(33.333% - 30px);
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+            overflow: hidden;
+        }
+        .section:nth-child(1) {
+            background-color: #ffeb3b;
+        }
+        .section:nth-child(2) {
+            background-color: #4caf50;
+            color: white;
+        }
+        .section:nth-child(3) {
+            background-color: #03a9f4;
+            color: white;
+        }
+        .title {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            background-color: rgba(0, 0, 0, 0.7);
+            color: white;
+            padding: 5px 10px;
+            border-radius: 5px;
+            font-weight: bold;
+        }
+        p {
+            margin-top: 50px;
+        }
+
+        /* Responsive Layouts */
+        @media (max-width: 991px) {
+            .section {
+                min-width: calc(50% - 30px);
+            }
+            .section:nth-child(3) {
+                min-width: 100%;
+            }
+        }
+
+        @media (max-width: 767px) {
+            .section {
+                min-width: 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Simple Page</h1>
+    </header>
+    <main>
+        <section class="section" id="AI">
+            <div class="title">AI</div>
+            <p>Transforming Industries
+                Artificial Intelligence (AI) has revolutionized various industries, from healthcare to finance and beyond. It enables machines to perform tasks like decision-making, language processing, and image recognition. For instance, AI-powered diagnostic tools in healthcare help detect diseases early, while in finance, AI streamlines fraud detection and risk management.
+                However, the rapid growth of AI also raises ethical concerns about privacy, job displacement, and algorithmic bias.
+            </p>
+        </section>
+        <section class="section" id="Cyber">
+            <div class="title">Cybersecurity</div>
+            <p>Protecting Digital Identities
+                As the digital age expands, cybersecurity has become essential to protect sensitive data and ensure online safety. Cyber-attacks such as ransomware, phishing, and data breaches threaten businesses, governments, and individuals.
+                The rise of remote work and cloud computing has further exposed vulnerabilities in digital systems. Investing in robust cybersecurity measures, such as encryption, two-factor authentication, and regular system updates, is vital.
+                </p>
+        </section>
+        <section class="section" id="Blockchain">
+            <div class="title">Blockchain</div>
+            <p>The Future of Secure Transactions
+                Blockchain technology is transforming the way we think about security and transparency in transactions. It offers a decentralized, tamper-proof ledger that records data across multiple nodes. Initially popularized by cryptocurrencies like Bitcoin, blockchain now has applications in supply chain management, healthcare, and voting systems.
+                Its transparency ensures trust in transactions, while its decentralized nature makes it resilient to fraud and cyber-attacks.</p>
+        </section>
+    </main>
+</body>
+</html>
